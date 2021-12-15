@@ -1,1 +1,1 @@
-# attendance_management
+# 勤怠管理機能
