@@ -22,9 +22,14 @@ Route::group(['middleware' => ['guest']], function(){
     ->name('login.form');
     Route::post('/login', 'LoginController@login')
     ->name('login');
+    // LINEの認証画面に遷移
+    Route::get('auth/line', 'LineLoginController@redirectToProvider')->name('line.login');
   });
   Route::fallback(function(){ return redirect()->route('login.form'); });
 });
+
+// 認証後にリダイレクトされるURL(コールバックURL)
+Route::get('auth/line/callback', 'Auth\LineLoginController@handleProviderCallback');
 
 Route::group(['middleware' => ['auth']], function(){
   // ホーム

@@ -3319,6 +3319,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3347,6 +3351,10 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_Data_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common/Data.vue */ "./resources/js/components/common/Data.vue");
 /* harmony import */ var _common_Link_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/Link.vue */ "./resources/js/components/common/Link.vue");
+//
+//
+//
+//
 //
 //
 //
@@ -42446,7 +42454,7 @@ var render = function () {
             },
             [
               _c("i", { staticClass: "mdi mdi-clock" }),
-              _vm._v(" Work Stamp\n    "),
+              _vm._v(" Work Stamp\n      "),
             ]
           ),
           _vm._v(" "),
@@ -42491,6 +42499,18 @@ var render = function () {
                   },
                 },
                 [
+                  _vm.auth_user.line_img
+                    ? _c("div", { staticClass: "nav-profile-img" }, [
+                        _c("img", {
+                          attrs: { src: _vm.auth_user.line_img, alt: "image" },
+                        }),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "availability-status online",
+                        }),
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
                   _c("div", { staticClass: "nav-profile-text" }, [
                     _c("p", { staticClass: "mb-1 text-black" }, [
                       _vm._v(_vm._s(_vm.auth_user.username)),
@@ -42675,7 +42695,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("a", { staticClass: "dropdown-item", attrs: { href: "/logout" } }, [
           _c("i", { staticClass: "mdi mdi-logout mr-2 text-primary" }),
-          _vm._v(" Signout\n          "),
+          _vm._v(" Signout\n            "),
         ]),
       ]
     )
@@ -42715,6 +42735,16 @@ var render = function () {
               attrs: { href: _vm.userShowLink(_vm.authId()) },
             },
             [
+              _vm.auth_user.line_img
+                ? _c("div", { staticClass: "nav-profile-image" }, [
+                    _c("img", {
+                      attrs: { src: _vm.auth_user.line_img, alt: "profile" },
+                    }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "login-status online" }),
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
               _c(
                 "div",
                 { staticClass: "nav-profile-text d-flex flex-column" },

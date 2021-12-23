@@ -12,6 +12,7 @@
         "azuyalabs/yasumi": "^2.4",
         "barryvdh/laravel-debugbar": "^3.6",
         "fideloper/proxy": "^4.4",
+        "guzzlehttp/guzzle": "^7.4",
         "laravel/framework": "^6.20.26",
         "laravel/tinker": "^2.5"
     },

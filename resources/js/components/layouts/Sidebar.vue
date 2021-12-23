@@ -3,6 +3,10 @@
     <ul class="nav">
       <li class="nav-item nav-profile">
         <a :href="userShowLink(authId())" class="nav-link">
+          <div class="nav-profile-image" v-if="auth_user.line_img">
+            <img :src="auth_user.line_img" alt="profile">
+            <span class="login-status online"></span>
+          </div>
           <div class="nav-profile-text d-flex flex-column">
             <span class="font-weight-bold mb-2">{{ auth_user.username }}</span>
             <span class="text-secondary text-small">{{ role(auth_user.role) }}</span>
